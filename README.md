@@ -1,49 +1,3 @@
-<p align="center">
-  <a href="http://courses.angularclass.com/courses/angular-2-fundamentals" target="_blank">
-    <img width="438" alt="Angular 2 Fundamentals" src="https://cloud.githubusercontent.com/assets/1016365/17200649/085798c6-543c-11e6-8ad0-2484f0641624.png">
-  </a>
-</p>
-
----
-
-<p align="center">
-  <a href="https://angularclass.com" target="_blank">
-    <img src="https://cloud.githubusercontent.com/assets/1016365/9864650/93a5660a-5b00-11e5-8716-a0d538d12913.png" alt="ng6-starter" width="480px;" >
-  </a>
-  <!-- old img url: http://res.cloudinary.com/angularclass/image/upload/v1431802814/ng6_vrmd60.png -->
-</p>
-
-# NG6 [![Join Slack](https://img.shields.io/badge/slack-join-brightgreen.svg)](https://angularclass.com/slack-join) [![Join the chat at https://gitter.im/angularclass/NG6-starter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/angularclass/NG6-starter?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
-
-> The de facto starter repo for building scalable apps with [Angular](https://angularjs.org), [ES6](https://git.io/es6features), and [Webpack](http://webpack.github.io/)
-
-This repo serves as a minimal starter for those looking to get up-and-running with Angular and ES6, using [Gulp](http://gulpjs.com/) and [Webpack](http://webpack.github.io/) for the build process.
-**This seed is not a Yeoman generator.** It's a minimal starter with tasks for building the boilerplate. **These are its features**:
-* The best practice in directory/file organization for Angular (allowing for infinite horizontal app scaling)
-* A ready-to-go build system for working with [ES6](https://git.io/es6features)
-* Tasks for generating additional boilerplate Angular components
-* A full testing system in place
-* [Stylus](https://learnboost.github.io/stylus/) support
-
-**Check out the [JSPM version](https://github.com/angularclass/NG6-starter/tree/jspm)--an alternative to Webpack as an ES6 build system.**
-
-> If you're looking for a preliminary [Angular 2](https://angular.io/) build, please use the [angular2-webpack-starter](https://github.com/angularclass/angular2-webpack-starter).
-___
-
-# Table of Contents
-* [Walkthrough](#walkthrough)
-    * [Build System](#build-system)
-    * [File Structure](#file-structure)
-    * [Testing Setup](#testing-setup)
-* [Getting Started](#getting-started)
-    * [Dependencies](#dependencies)
-    * [Installing](#installing)
-    * [Running the App](#running-the-app)
-        * [Gulp Tasks](#gulp-tasks)
-        * [Testing](#testing)
-		* [Generating Components](#generating-components)		
-* [Starter Kit Support and Questions](#starter-kit-support-and-questions)
-
 # Walkthrough
 ## Build System
 NG6 uses Gulp and Webpack together for its build system. Yes, you don't need Gulp if you're using Webpack. This is true if your build system is only responsible for file manipulation. However, ours is not.
@@ -101,14 +55,13 @@ Once you have these, install the following as globals:
 `npm install -g gulp karma karma-cli webpack`
 
 ## Installing
-* `fork` this repo
-* `clone` your fork
+* `clone` this repo
 * `npm install -g gulp karma karma-cli webpack` install global cli dependencies
 * `npm install` to install dependencies
 
 ## Running the App
 NG6 uses Gulp to build and launch the development environment. After you have installed all dependencies, you may run the app. Running `gulp` will bundle the app with `webpack`, launch a development server, and watch all files. The port will be displayed in the terminal.
- 
+
 ### Gulp Tasks
 Here's a list of available tasks:
 * `webpack`
@@ -121,7 +74,7 @@ Here's a list of available tasks:
 	* runs `serve`.
 * `component`
   * scaffolds a new Angular component. [Read below](#generating-components) for usage details.
-  
+
 ### Testing
 To run the tests, run `npm test` or `karma start`.
 
@@ -129,12 +82,6 @@ To run the tests, run `npm test` or `karma start`.
 
 Be sure to define your `*.spec.js` files within their corresponding component directory. You must name the spec file like so, `[name].spec.js`. If you don't want to use the `.spec.js` suffix, you must change the `regex` in `spec.bundle.js` to look for whatever file(s) you want.
 `Mocha` is the testing suite and `Chai` is the assertion library. If you would like to change this, see `karma.conf.js`.
-
-### Examples
-
-It's always easier to learn something if you have an examples. Here is a list of repos which based on this starter:
-
- - [TodoMVC Example App](https://github.com/AngularClass/NG6-todomvc-starter)
 
 ### Generating Components
 Following a consistent directory structure between components offers us the certainty of predictability. We can take advantage of this certainty by creating a gulp task to automate the "instantiation" of our components. The component boilerplate task generates this:
@@ -169,7 +116,7 @@ Because the argument to `--name` applies to the folder name **and** the actual c
 
 ___
 
-enjoy — **AngularClass** 
+enjoy — **AngularClass**
 
 <br><br>
 
