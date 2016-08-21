@@ -1,0 +1,40 @@
+<section class="col-xs-10 col-xs-offset-1 text-center NaturalForm">
+  <div class="NaturalForm__wrapper">
+    <h3 class="NaturalForm__title">I need a
+      <div class="NaturalForm__field"  ng-class="{'NaturalForm__field--opened': $ctrl.currentMenu.solution}">
+        <a href="" class="NaturalForm__field__toggle" ng-click="$ctrl.modalType('solution');">{{ $ctrl.currentSolution.solution }}</a>
+        <ul class="NaturalForm__field__menu">
+          <li class="NaturalForm__field__menu__item" ng-class="{'NaturalForm__field__menu__item--check': $key === $ctrl.currentSolution.solution}" ng-repeat="($key, $value) in $ctrl.solutions" ng-click="$ctrl.setCurrentSolution($key, 'solution');">{{ $key }}</li>
+        </ul>
+      </div> for
+      <div class="NaturalForm__field" ng-class="{'NaturalForm__field--opened': $ctrl.currentMenu.industry}">
+        <a href="" class="NaturalForm__field__toggle" ng-click="$ctrl.modalType('industry');" ng-bind="!$ctrl.currentSolution.industry ? 'any industry' : $ctrl.currentSolution.industry">{{ $ctrl.currentSolution.industry }}</a>
+        <ul class="NaturalForm__field__menu">
+          <li class="NaturalForm__field__menu__item" ng-class="{'NaturalForm__field__menu__item--check': $key === $ctrl.currentSolution.solution}" ng-click="$ctrl.setCurrentSolution('', 'industry');">Any industry</li>
+          <li class="NaturalForm__field__menu__item" ng-class="{'NaturalForm__field__menu__item--check': industry === $ctrl.currentSolution.industry}" ng-repeat="industry in $ctrl.getIndustries()" ng-click="$ctrl.setCurrentSolution(industry, 'industry');">{{ industry }}</li>
+        </ul>
+      </div> and
+      <div class="NaturalForm__field" ng-class="{'NaturalForm__field--opened': $ctrl.currentMenu.product}">
+        <a href="" class="NaturalForm__field__toggle" ng-click="$ctrl.modalType('product');" ng-bind="!$ctrl.currentSolution.product ? 'any product' : $ctrl.currentSolution.product">{{ $ctrl.currentSolution.product }}</a>
+        <ul class="NaturalForm__field__menu">
+          <li class="NaturalForm__field__menu__item" ng-class="{'NaturalForm__field__menu__item--check': $key === $ctrl.currentSolution.solution}" ng-click="$ctrl.setCurrentSolution('', 'product');">Any product</li>
+          <li class="NaturalForm__field__menu__item" ng-class="{'NaturalForm__field__menu__item--check': product === $ctrl.currentSolution.product}" ng-repeat="product in $ctrl.getProducts()" ng-click="$ctrl.setCurrentSolution(product, 'product');">{{ product }}</li>
+        </ul>
+      </div>
+      <div class="NaturalForm__overlay" ng-click="$ctrl.modalType();"></div>
+    </h3>
+    <button class="btn btn-lg" type="submit">Find it!</button>
+    <div class="row">
+      <div class="col-xs-12">
+        <ul class="NaturalForm__results">
+          <li ng-repeat="result in $ctrl.getResults()">
+            <a ng-href="/{{ result.name }}/">{{ result.name }}</a>
+            <a ng-href="/{{ result.name }}/industries/">{{ result.industry }}</a>
+            <a ng-href="/{{ result.name }}/products/">{{ result.product }}</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="NaturalForm__separator"></div>
+</section>

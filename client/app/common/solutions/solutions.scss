@@ -1,0 +1,40 @@
+@import "../../../../node_modules/iconfonts/stylesheets/ionicons";
+@include ion-font;
+
+.Solutions {
+  margin-bottom: 15rem;
+  &__icon {
+    width: 90px;
+    height: 90px;
+    display: inline-block;
+    font-size: 6rem;
+    &--bulb {
+      background: #7B7B7B;
+      &:before {
+        @include ion-icon("ios-lightbulb-outline", 6rem, #FFF);
+      }
+    }
+    &--trophy {
+      background-color: #F5BA2B;
+      &:before {
+        @include ion-icon("trophy", 6rem, #FFF);
+      }
+    }
+    &--round {
+      border-radius: 50%;
+    }
+  }
+  &__wrapper {
+    margin: 4rem 0;
+  }
+  &__link {
+    display: block;
+    text-decoration: underline;
+    font-size: 2.5rem;
+    color: #4C4C4C;
+    margin-bottom: 2rem;
+    &:first-of-type {
+      margin-top: 2rem;
+    }
+  }
+}

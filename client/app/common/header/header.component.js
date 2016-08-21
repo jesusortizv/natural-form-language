@@ -1,6 +1,6 @@
-import template from './navbar.html';
-import controller from './navbar.controller';
-import './navbar.scss';
+import template from './header.html';
+import controller from './header.controller';
+import './header.scss';
 
 let navbarComponent = {
   restrict: 'E',

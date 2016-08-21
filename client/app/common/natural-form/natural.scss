@@ -1,0 +1,106 @@
+@import "../../../../node_modules/iconfonts/stylesheets/ionicons";
+@include ion-font;
+$title-color-hover: darken(#DE222D, 15%);
+.NaturalForm {
+  &__field {
+    position: relative;
+    display: inline-block;
+    &--opened {
+      ~.NaturalForm__overlay {
+        opacity: 1;
+        visibility: visible;
+      }
+      >.NaturalForm__field__menu {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(-40%) scale(1.4);
+      }
+    }
+    &__menu {
+      min-width: 26rem;
+      position: absolute;
+      left: 0;
+      color: #E7D7D8;
+      font-size: 1.5rem;
+      line-height: 1.5rem;
+      top: 50%;
+      padding: 0;
+      margin: 0;
+      list-style: none;
+      background-color: #DE222D;
+      z-index: 1;
+      border-radius: 5px;
+      border: 2px solid #DE222D;
+      opacity: 0;
+      max-height: 250px;
+      overflow-y: scroll;
+      visibility: hidden;
+      transform: translateY(0%) scale(1);
+      transition: visibility 0s 0s, opacity 0.5s, transform 0.5s;
+      &__item {
+        cursor: pointer;
+        padding: 1rem;
+        &:hover {
+          background-color: lighten(#DE222D, 10%);
+        }
+        &--check {
+          &:after {
+            @include ion-icon("checkmark-round", 2rem, #FFF);
+            float: right;
+          }
+        }
+      }
+    }
+    &__toggle {
+      &:link,
+      &:visited {
+        color: #DE222D;
+        border-bottom: 3px solid #DE222D;
+        text-decoration: none;
+      }
+      &:hover {
+        text-decoration: none;
+        color: $title-color-hover;
+        border-color: $title-color-hover;
+      }
+    }
+  }
+  &__title {
+    font-size: 4.4rem;
+    line-height: 7rem;
+    margin-bottom: 3rem;
+  }
+  &__results {
+    list-style: none;
+    margin-top: 3rem;
+    li {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+  }
+  &__separator {
+    display: inline-block;
+    border-bottom: 1px solid #CCC;
+    height: 1rem;
+    width: 65%;
+    margin-top: 3rem;
+  }
+  .btn {
+    background-color: #DE222D;
+    color: #FFF;
+    &:hover {
+      background-color: $title-color-hover;
+    }
+  }
+  &__overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    opacity: 0;
+    visibility: hidden;
+    transition: visibility 0s, opacity 0.2s;
+  }
+}

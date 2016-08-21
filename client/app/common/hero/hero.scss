@@ -1,0 +1,18 @@
+.Hero {
+  background-color: #0F0F0F;
+  &__title {
+    font-size: 2rem;
+    text-align: center;
+    color: #A7A7A7;
+    margin: 0;
+  }
+  &__wrapper {
+    display: inline-block;
+    width: 100%;
+    padding: 2rem;
+  }
+  &__highlight {
+    color: #DE222D;
+    font-style: normal;
+  }
+}

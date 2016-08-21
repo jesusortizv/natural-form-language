@@ -1,0 +1,27 @@
+@import "../../../../node_modules/iconfonts/stylesheets/ionicons";
+@include ion-font;
+
+.Search {
+  background-color: #333333;
+  &__wrapper {
+    padding: 0.5rem 0;
+    display: inline-block;
+    width: 100%;
+    &__search-field {
+      display: inline-block;
+      width: 96%;
+    }
+  }
+  .form-control {
+    padding: 0.5rem;
+    height: 100%;
+    font-size: 1.0rem;
+  }
+  &__icon {
+    display: inline-block;
+    margin-left: 1rem;
+    &:before {
+      @include ion-icon("ios-search", 2rem, #FFF);
+    }
+  }
+}
