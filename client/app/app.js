@@ -1,6 +1,5 @@
 import 'normalize.css';
 import 'bootstrap-css';
-import 'font-awesome-webpack';
 import angular from 'angular';
 import uiRouter from 'angular-ui-router';
 import Common from './common/common';
